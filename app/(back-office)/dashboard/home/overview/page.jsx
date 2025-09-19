@@ -11,13 +11,15 @@ export default async function Dashboard() {
       <DashboardBanner />
       <SalesOverview />
       <CurrentStock title="Available Stock Items" items={items} />
-      {
-        warehouses.map((warehouse, i)=>{
-            return(
-                <CurrentStock key={i} title={`Available Stock Item in Warehouse ${warehouse.title}`} items={warehouse.items} />
-            )
-        })
-      }
+      {warehouses.map((warehouse, i) => {
+        return (
+          <CurrentStock
+            key={i}
+            title={`Available Stock Item in Warehouse ${warehouse?.title || "Unknown"}`}
+            items={warehouse?.items || []}
+          />
+        );
+      })}
     </div>
   );
 }
