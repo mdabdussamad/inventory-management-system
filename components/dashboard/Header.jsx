@@ -86,7 +86,7 @@ export default function Header({ setShowSidebar }) {
         {/* Company */}
         <div className="flex ml-2 gap-3">
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger asChild>
               <button className="flex items-center">                
                 <span>{userName}</span>
                 <ChevronDown className="w-4 h-4" />
