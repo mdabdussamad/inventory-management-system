@@ -9,7 +9,7 @@ export default function DashboardBanner() {
       className={`${
         hidden
           ? "hidden"
-          : "grid grid-cols-12 items-center py-6 px-16 bg-white gap-4 relative"
+          : "hidden lg:grid grid-cols-12 items-center py-6 px-16 bg-white gap-4 relative"
       }`}
     >
       {/* Icon */}
@@ -32,7 +32,7 @@ export default function DashboardBanner() {
       </div>
       {/* Close Button */}
       <button onClick={()=>setHidden(true)} className="absolute top-4 right-16">
-        <X className="rext-slate-600"/>
+        <X className="text-slate-600"/>
       </button>
     </div>
   );
